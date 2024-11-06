@@ -11,3 +11,13 @@
 | add static data to page                           |       |           |
 | add dynamic data to page                          |       |           |
 | add previous and next button                      |       |           |
+
+## Resources :
+
+| Type         | Link                            |
+|--------------|---------------------------------|
+| API          | https://www.dnd5eapi.co/        |
+| CSS          | https://www.w3schools.com/css/  |
+| JS           | https://www.w3schools.com/js/   |
+| HTML         | https://www.w3schools.com/html/ |
+| AI assistant | codeium.io/                     |
