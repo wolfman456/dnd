@@ -24,3 +24,42 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+
+#buttons{
+    display: flex;
+    justify-content: center;
+}
+#previous-button {
+    display: flex;
+    background: white;
+    margin: 20px;
+}
+#next-button {
+    display: flex;
+    background: white;
+    margin: 20px;
+}
+
+#next-button:hover {
+    background: white;
+    color: red;
+}
+
+#next-button:active {
+    background: white;
+    color: black;
+}
+#previous-button:active {
+    background: white;
+    color: black;
+}
+#previous-button:hover {
+    background: white;
+    color: red;
+}
+#previous-button:disabled {
+    display: none;
+}
+#next-button:disabled {
+    display: none;
+}

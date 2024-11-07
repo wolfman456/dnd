@@ -1,4 +1,4 @@
-export class Data {
+export default {
     constructor() {
         this.results = [
             {
@@ -18,4 +18,4 @@ export class Data {
             }
         ];
     }
-}
+};
