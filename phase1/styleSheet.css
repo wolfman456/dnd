@@ -35,6 +35,7 @@ h1 {
     margin: 20px;
 }
 #next-button {
+    cursor: pointer;
     display: flex;
     background: white;
     margin: 20px;
@@ -45,21 +46,16 @@ h1 {
     color: red;
 }
 
-#next-button:active {
-    background: white;
-    color: black;
-}
-#previous-button:active {
-    background: white;
-    color: black;
-}
 #previous-button:hover {
     background: white;
     color: red;
 }
-#previous-button:disabled {
-    display: none;
+
+#previous-button:disabled{
+    color: lightgray;
+    cursor: not-allowed;
 }
 #next-button:disabled {
-    display: none;
+    color: lightgray;
+    cursor: not-allowed;
 }

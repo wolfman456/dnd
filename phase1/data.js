@@ -1,4 +1,4 @@
-export default {
+export default new (class {
     constructor() {
         this.results = [
             {
@@ -18,4 +18,4 @@ export default {
             }
         ];
     }
-};
+})();
