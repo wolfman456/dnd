@@ -1,16 +1,16 @@
 # Goals :
 
-| Steps                                             | Issue                                     | Status    |
-|---------------------------------------------------|-------------------------------------------|-----------|
-| create landing page                               |                                           | completed |
-| create search field                               |                                           | completed |
-| create search button                              |                                           | completed |
-| Get data from API                                 |                                           |           |
-| Get Information from search field on button click |                                           | complete  |
-| Display data on page                              |                                           |           |
-| add static data to page                           | importing issues due to wrong script type | complete  |
-| add dynamic data to page                          |                                           |           |
-| add previous and next button                      |                                           |           |
+| Steps                                             | Issue                                                                      | Status    |
+|---------------------------------------------------|----------------------------------------------------------------------------|-----------|
+| create landing page                               |                                                                            | completed |
+| create search field                               |                                                                            | completed |
+| create search button                              |                                                                            | completed |
+| Get data from API                                 |                                                                            | completed |
+| Get Information from search field on button click |                                                                            | completed |
+| Display data on page                              |                                                                            | completed |
+| add static data to page                           | importing issues due to wrong script type                                  | completed |
+| add dynamic data to page                          |                                                                            | completed |
+| add previous and next button                      | several different options used to disable buttons used before find balance | completed |
 
 ## Resources :
 
