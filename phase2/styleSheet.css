@@ -1,0 +1,61 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex-box: 1;
+}
+
+#search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#monster-list {
+    color: white;
+    font-family: "Droid Sans Mono", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+}
+#previous-button {
+    display: flex;
+    background: white;
+    margin: 20px;
+}
+#next-button {
+    cursor: pointer;
+    display: flex;
+    background: white;
+    margin: 20px;
+}
+
+#next-button:hover {
+    background: white;
+    color: red;
+}
+
+#previous-button:hover {
+    background: white;
+    color: red;
+}
+
+#previous-button:disabled{
+    color: lightgray;
+    cursor: not-allowed;
+}
+#next-button:disabled {
+    color: lightgray;
+    cursor: not-allowed;
+}

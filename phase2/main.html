@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D&D monster List</title>
+    <link rel="stylesheet" href="styleSheet.css">
+</head>
+<body>
+<div id="root">
+    <div id="home">
+        <h1>Monster List</h1>
+    </div>
+    <div id="search">
+        <select id="selection-list">
+            <option value="spells">spells</option>
+            <option value="monsters">Monsters</option>
+            <option value="classes">classes</option>
+            <option value="equipment">equipment</option>
+        </select>
+        <button id="submit">Submit</button>
+    </div>
+    <div id="monster-list">
+    </div>
+</div>
+<div class="button-container" id="buttons">
+    <button disabled id="previous-button">Previous</button>
+    <button disabled id="next-button">Next</button>
+</div>
+<script type="module" src="index.js"></script>
+</body>
+</html>
