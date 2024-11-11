@@ -7,6 +7,7 @@ export async function fetchApiData(searchTerm) {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
+        console.log("success", data);
         return data;
     } catch (error) {
         console.error('Failed to fetch data:', error);

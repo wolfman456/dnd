@@ -2,7 +2,7 @@ import {fetchApiData} from './apiCall.js';
 
 let selectionList = document.getElementById("selection-list");
 let submit = document.getElementById("submit");
-let monsterList = document.getElementById("monster-list");
+let returnList = document.getElementById("Return-list");
 let prev = document.getElementById("previous-button");
 let next = document.getElementById("next-button");
 let count = 0;
@@ -13,6 +13,7 @@ submit.addEventListener("click", () => {
     const searchTerm = selectionList.value.trim();
 
     fetchApiData(searchTerm).then((localData) => {
+
         console.log('Fetched data:', localData);
 
         if (localData !== undefined && localData.results.length > 0) {
@@ -36,13 +37,13 @@ submit.addEventListener("click", () => {
 next.addEventListener("click", () => {
 
     count++
-    monsterList.innerHTML = data[count].name
+    returnList.innerHTML = data[count].name
     checkCount()
 
 })
 prev.addEventListener("click", () => {
     count--
-    monsterList.innerHTML = data[count].name
+    returnList.innerHTML = data[count].name
     checkCount()
 })
 
@@ -62,14 +63,13 @@ let checkCount = () => {
 }
 
 function displayReturn() {
-    console.log("im here")
-    for (let i = 0; i < count; i++) {
+    for (let i = 0; i <= count; i++) {
        const button =document.createElement(`button`)
         button.textContent = data[i].name
         button.addEventListener('click', ()=>{
-            console.log(data[i].name);
+            console.log(data[i].url);
         })
 
-        monsterList.appendChild(button);
+        returnList.appendChild(button);
     }
 }
