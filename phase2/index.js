@@ -13,9 +13,6 @@ submit.addEventListener("click", () => {
     const searchTerm = selectionList.value.trim();
 
     fetchApiData(searchTerm).then((localData) => {
-
-        console.log('Fetched data:', localData);
-
         if (localData !== undefined && localData.results.length > 0) {
             data = localData.results
             console.log(data[0].name);
@@ -36,19 +33,21 @@ submit.addEventListener("click", () => {
 
 next.addEventListener("click", () => {
 
-    count++
-    returnList.innerHTML = data[count].name
-    checkCount()
+    if(count + 10 <= data.length-1) {
+        count = count +10
+        displayReturn()
+    }else{
+        count = ((data.length-1) - count) + count
+    }
 
 })
 prev.addEventListener("click", () => {
     count--
     returnList.innerHTML = data[count].name
-    checkCount()
 })
 
 let checkCount = () => {
-    if (count <= 0) {
+    if (count <= 9) {
         prev.disabled = true
     }
     if (count > 0) {
@@ -57,7 +56,7 @@ let checkCount = () => {
     if (count === data.length - 1) {
         next.disabled = true
     }
-    if (count < data.length - 1) {
+    if (count < (data.length - 1)-count) {
         next.disabled = false
     }
 }
@@ -70,7 +69,7 @@ function displayReturn() {
         button.addEventListener('click', ()=>{
             console.log(data[i].url);
         })
-
+        checkCount()
         returnList.appendChild(button);
     }
 }
