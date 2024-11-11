@@ -63,6 +63,7 @@ let checkCount = () => {
 }
 
 function displayReturn() {
+    returnList.innerHTML =""
     for (let i = 0; i <= count; i++) {
        const button =document.createElement(`button`)
         button.textContent = data[i].name
