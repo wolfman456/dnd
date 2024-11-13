@@ -7,12 +7,13 @@ let prev = document.getElementById("previous-button");
 let next = document.getElementById("next-button");
 let count = 0;
 let data;
+let startingCount = 0
 
 
 submit.addEventListener("click", () => {
     const searchTerm = selectionList.value.trim();
 
-    fetchApiData(searchTerm).then((localData) => {
+    fetchApiData("api/"+searchTerm).then((localData) => {
         if (localData !== undefined && localData.results.length > 0) {
             data = localData.results
             console.log(data[0].name);
@@ -33,37 +34,45 @@ submit.addEventListener("click", () => {
 
 next.addEventListener("click", () => {
 
-    if(count + 10 <= data.length-1) {
+    if(count + 10 <= data.length) {
         count = count +10
+        startingCount += 10
         displayReturn()
     }else{
-        count = ((data.length-1) - count) + count
+        count = ((data.length) - count) + count
     }
 
 })
 prev.addEventListener("click", () => {
-    count--
-    returnList.innerHTML = data[count].name
+    if(count - 10 <= data.length) {
+        count-=10
+        startingCount -= 10
+        displayReturn()
+    }
 })
 
 let checkCount = () => {
     if (count <= 9) {
         prev.disabled = true
     }
-    if (count > 0) {
+    if (count > 9) {
         prev.disabled = false
     }
-    if (count === data.length - 1) {
+    if (count === data.length) {
         next.disabled = true
     }
-    if (count < (data.length - 1)-count) {
+    if (count < data.length-count) {
         next.disabled = false
+    }
+    if (count === data.length) {
+        next.disabled = true
     }
 }
 
 function displayReturn() {
     returnList.innerHTML =""
-    for (let i = 0; i <= count; i++) {
+    console.log(startingCount)
+    for (let i = startingCount; i <= count; i++) {
        const button =document.createElement(`button`)
         button.textContent = data[i].name
         button.addEventListener('click', ()=>{
@@ -73,3 +82,11 @@ function displayReturn() {
         returnList.appendChild(button);
     }
 }
+
+
+function disableButtons(){
+    prev.disabled = true
+    next.disabled = true
+}
+
+disableButtons()
