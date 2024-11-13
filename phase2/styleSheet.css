@@ -17,23 +17,35 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-#monster-list {
-    color: white;
+
+#Return-list {
     font-family: "Droid Sans Mono", monospace;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
 }
 
-#buttons{
+#Return-list button {
+    flex: 1 1 calc(50% - 10px);
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+#buttons {
+    color: gray;
+    text-align: center;
+    padding: 50px;
     display: flex;
     justify-content: center;
 }
+
 #previous-button {
     display: flex;
     background: white;
     margin: 20px;
 }
+
 #next-button {
     cursor: pointer;
     display: flex;
@@ -51,10 +63,11 @@ h1 {
     color: red;
 }
 
-#previous-button:disabled{
+#previous-button:disabled {
     color: lightgray;
     cursor: not-allowed;
 }
+
 #next-button:disabled {
     color: lightgray;
     cursor: not-allowed;
