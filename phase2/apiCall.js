@@ -1,5 +1,5 @@
 export async function fetchApiData(searchTerm) {
-    const apiUrl = `https://www.dnd5eapi.co/${searchTerm}`; // Use the passed search term
+    const apiUrl = `https://www.dnd5eapi.co${searchTerm}`; // Use the passed search term
 
     try {
         const response = await fetch(apiUrl);

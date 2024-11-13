@@ -13,7 +13,7 @@ let startingCount = 0
 submit.addEventListener("click", () => {
     const searchTerm = selectionList.value.trim();
 
-    fetchApiData("api/"+searchTerm).then((localData) => {
+    fetchApiData("/api/" + searchTerm).then((localData) => {
         if (localData !== undefined && localData.results.length > 0) {
             data = localData.results
             console.log(data[0].name);
@@ -34,18 +34,25 @@ submit.addEventListener("click", () => {
 
 next.addEventListener("click", () => {
 
-    if(count + 10 <= data.length) {
-        count = count +10
+    if (count + 10 <= data.length) {
+        count = count + 10
         startingCount += 10
         displayReturn()
-    }else{
-        count = ((data.length) - count) + count
+    } else {
+        startingCount = count + 1
+        count = ((data.length - 1) - count) + count
+        console.log(startingCount)
+        displayReturn()
     }
 
 })
 prev.addEventListener("click", () => {
-    if(count - 10 <= data.length) {
-        count-=10
+    if(count- 10 <10){
+        count = 9
+        startingCount = 0
+        displayReturn()
+    }else if (count <= data.length) {
+        count -= 10
         startingCount -= 10
         displayReturn()
     }
@@ -58,10 +65,10 @@ let checkCount = () => {
     if (count > 9) {
         prev.disabled = false
     }
-    if (count === data.length) {
+    if (count === data.length - 1) {
         next.disabled = true
     }
-    if (count < data.length-count) {
+    if (count < data.length - count) {
         next.disabled = false
     }
     if (count === data.length) {
@@ -70,13 +77,13 @@ let checkCount = () => {
 }
 
 function displayReturn() {
-    returnList.innerHTML =""
+    returnList.innerHTML = ""
     console.log(startingCount)
     for (let i = startingCount; i <= count; i++) {
-       const button =document.createElement(`button`)
+        const button = document.createElement(`button`)
         button.textContent = data[i].name
-        button.addEventListener('click', ()=>{
-            console.log(data[i].url);
+        button.addEventListener('click', () => {
+            displayChoice(data[i].url)
         })
         checkCount()
         returnList.appendChild(button);
@@ -84,9 +91,17 @@ function displayReturn() {
 }
 
 
-function disableButtons(){
+function disableButtons() {
     prev.disabled = true
     next.disabled = true
+}
+
+function displayChoice(data){
+    fetchApiData(data).then((result) => {
+        while (document.body.firstChild) {
+            document.body.removeChild(document.body.firstChild);
+        }
+    })
 }
 
 disableButtons()
