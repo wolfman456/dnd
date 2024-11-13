@@ -12,8 +12,8 @@ information returned inside the "url" portion of the return object from the api 
 | Change search to dropdown                                     |       | completed |
 | display multiple names at once for return                     |       | complete  |
 | display buttons in a grid                                     |       | complete  |
-| make name return click able to pull up additional information |       |           |
+| make name return click able to pull up additional information |       | complete  |
 | display new data return from call                             |       |           |
-| update next a previous buttons                                |       |           |
+| update next and previous buttons                              |       | complete  |
 
 
