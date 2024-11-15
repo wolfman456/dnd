@@ -16,10 +16,8 @@ submit.addEventListener("click", () => {
     fetchApiData("/api/" + searchTerm).then((localData) => {
         if (localData !== undefined && localData.results.length > 0) {
             data = localData.results
-            console.log(data[0].name);
 
             if (data.length - 10 >= 0) {
-                console.log("count is 9")
                 count = 9
             } else {
                 count = data.toString() - 1
@@ -41,15 +39,17 @@ next.addEventListener("click", () => {
     } else {
         startingCount = count + 1
         count = ((data.length - 1) - count) + count
-        console.log(startingCount)
         displayReturn()
     }
 
 })
 prev.addEventListener("click", () => {
-    if(count- 10 <10){
-        count = 9
-        startingCount = 0
+    if(count === data.length -1) {
+        console.log("data length", data.length)
+        count = count - ((data.length) - startingCount)
+        console.log("count", count)
+        startingCount = startingCount - 10
+        console.log("startingCount", startingCount)
         displayReturn()
     }else if (count <= data.length) {
         count -= 10
@@ -78,7 +78,6 @@ let checkCount = () => {
 
 function displayReturn() {
     returnList.innerHTML = ""
-    console.log(startingCount)
     for (let i = startingCount; i <= count; i++) {
         const button = document.createElement(`button`)
         button.textContent = data[i].name
