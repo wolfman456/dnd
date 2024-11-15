@@ -1,4 +1,5 @@
 import {fetchApiData} from './apiCall.js';
+import {displayClass} from "./displayClass.js";
 
 let selectionList = document.getElementById("selection-list");
 let submit = document.getElementById("submit");
@@ -100,6 +101,7 @@ function displayChoice(data){
         while (document.body.firstChild) {
             document.body.removeChild(document.body.firstChild);
         }
+        displayClass(result)
     })
 }
 
