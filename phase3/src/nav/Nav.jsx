@@ -1,4 +1,4 @@
-
+import {Link} from 'react-router-dom'
 
 function NavBar() {
     return (
@@ -7,7 +7,8 @@ function NavBar() {
                 <a className="nav-link active" aria-current="page" href="#">Active</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#">Link</a>
+                <a className="nav-link">
+                    <Link to='/'>Home</Link></a>
             </li>
             <li className="nav-item">
                 <a className="nav-link" href="#">Link</a>

@@ -1,9 +1,8 @@
-import Nav from '../src/nav/Nav.jsx'
+import Home from "./nav/Home.jsx";
 
 function App() {
     return (
-        <Nav/>
-
+        <Home path="/"/>
     )
 }
 
