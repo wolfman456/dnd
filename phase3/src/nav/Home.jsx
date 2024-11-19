@@ -1,22 +1,8 @@
-
-
-
-import backgroundImage from '../assets/fantasy-scene-with-dragon.jpg';
-
-function HomeScreen(){
+function HomeScreen() {
     return (
-        <>
-            <div
-                style={{
-                    backgroundImage: `url(${backgroundImage})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    minHeight: '100vh',
-                }}
-                >
-
-            </div>
-        </>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore et impedit numquam possimus sit ut?
+            Culpa cupiditate dolorum, excepturi laborum molestiae nesciunt nihil qui repudiandae sint, tempore ut
+            veritatis.</p>
     )
 }
 
