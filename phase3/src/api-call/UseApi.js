@@ -6,7 +6,7 @@ function useApiCall(url) {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch(`https://www.dnd5eapi.co/api/${url}`,{
+        fetch(`https://www.dnd5eapi.co${url}`,{
             method: 'GET',
         })
             .then((res) => {

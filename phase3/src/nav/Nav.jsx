@@ -1,7 +1,5 @@
 import {Link} from 'react-router-dom';
 
-// import useApiCall from '../api-call/UseApi.js'
-
 function NavBar() {
     // const {data, loading, error} = useApiCall("monsters");
     //

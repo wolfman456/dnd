@@ -1,10 +1,10 @@
 import Home from "./Home.jsx";
+import ReturnDisplay from "./render/ReturnDisplay.js";
 
 function App() {
     return (
-
-        <Home path="/"/>
-
+        <Home path="/"/>,
+        <ReturnDisplay path="/return-display/:call" element={<call/>} />
     )
 }
 
