@@ -1,10 +1,16 @@
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 function NavBar() {
     // const {data, loading, error} = useApiCall("monsters");
     //
     // if (loading) return <div>loading</div>;
     // if (error) return <div>Error: {error.message || "An unknown error occurred"}</div>;
+    const navigate = useNavigate();
+
+    const handleProductClick = (call) => {
+        console.log("setting call :" +call);
+        navigate(`:${call}`);
+    };
 
     return (
         <ul className="nav nav-tabs" style={{backgroundColor: 'black'}}>
@@ -12,10 +18,10 @@ function NavBar() {
                 <Link to='/' className="nav-link">Home</Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#">classes</a>
+                <Link to={`return-display/monsters`} className="nav-link">Classes</Link>
             </li>
             <li>
-                <a className="nav-link" href="#">equipment</a>
+                <Link to={`return-display/monsters`} className="nav-link">Monsters</Link>
             </li>
             <li>
                 <a className="nav-link" href="#">magic-items</a>

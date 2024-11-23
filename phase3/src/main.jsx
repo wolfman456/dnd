@@ -23,7 +23,6 @@ createRoot(document.getElementById('root')).render(
             >
             <App path='/*'/>
             </div>
-
         </StrictMode>
     </Router>,
 )
