@@ -3,11 +3,11 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
-import Classes from "./Classes.jsx";
+import RenderType from "./RenderType.jsx";
 
 function ReturnDisplay() {
     const { call } = useParams();
-    const { data, loading, error } = useApiCall(call);
+    const { data, loading, error } = useApiCall("/api/"+call);
     // State to track the index of the currently open item
     const [openIndex, setOpenIndex] = useState(null);
 
@@ -17,7 +17,6 @@ function ReturnDisplay() {
     return (
         <div className="btn-group-vertical" role="group" aria-label="Vertical button group">
             {data?.results?.map((item, index) => {
-                let newURL = fixURL(item.url);
                 const isOpen = openIndex === index; // Check if this item is open
 
                 return (
@@ -31,7 +30,7 @@ function ReturnDisplay() {
                         </Button>
                         <Collapse in={isOpen}>
                             <div id={`collapse-text-${index}`}>
-                                <Classes url={newURL}/>
+                                <RenderType type={call} url={item.url} />
                             </div>
                         </Collapse>
                     </div>
@@ -39,10 +38,6 @@ function ReturnDisplay() {
             })}
         </div>
     );
-}
-
-function fixURL(url) {
-    return url.replace("/api/", "");
 }
 
 export default ReturnDisplay;
