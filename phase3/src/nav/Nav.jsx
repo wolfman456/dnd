@@ -1,22 +1,29 @@
-
+import {Link} from 'react-router-dom';
 
 function NavBar() {
     return (
-        <ul className="nav nav-tabs">
+        <ul className="nav nav-tabs" style={{backgroundColor: 'black'}}>
             <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Active</a>
+                <Link to='/' className="nav-link">Home</Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#">Link</a>
+                <Link to={`return-display/classes`} className="nav-link">Classes</Link>
             </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#">Link</a>
+            <li>
+                <Link to={`return-display/monsters`} className="nav-link">Monsters</Link>
             </li>
-            <li className="nav-item">
-                <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+            <li>
+                <Link to={`return-display/equipment`} className="nav-link">equipment</Link>
+            </li>
+            <li>
+                <Link to={`return-display/magic-items`} className="nav-link">magic-items</Link>
+            </li>
+            <li>
+                <Link to={`return-display/races`} className="nav-link">races</Link>
             </li>
         </ul>
     )
+
 }
 
 export default NavBar;
