@@ -1,11 +1,6 @@
 import {Link} from 'react-router-dom';
 
 function NavBar() {
-    // const {data, loading, error} = useApiCall("monsters");
-    //
-    // if (loading) return <div>loading</div>;
-    // if (error) return <div>Error: {error.message || "An unknown error occurred"}</div>;
-
     return (
         <ul className="nav nav-tabs" style={{backgroundColor: 'black'}}>
             <li className="nav-item">

@@ -1,15 +1,18 @@
 # Goals :
 
-| Step                                                     | status |
-|----------------------------------------------------------|--------|
-| creat search function                                    |        |
-| Generate random table                                    |        |
-| bootstrap for CSS                                        |        |
-| creat header with tabs                                   | done   |
-| display return object for different topics               |        |
-| allow restriction on classification of monster for table |        |
+| Step                                                         | status  |
+|--------------------------------------------------------------|---------|
+| creat search function                                        |         |
+| Generate random table                                        |         |
+| bootstrap for CSS                                            | done    |
+| creat header with tabs                                       | done    |
+| display return object for different topics                   | done    |
+| ~~allow restriction on classification of monster for table~~ | removed |
 
 ## Lessons learned :
+
+This is not possible "allow restriction on classification of monster for table" with the api being used at this time.
+Without a large amount of modification to the data being received.
 
 ## Challenges :
 

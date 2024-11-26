@@ -7,7 +7,7 @@ function useApiCall(url) {
 
     useEffect(() => {
         console.log(url.toString())
-        fetch(`https://www.dnd5eapi.co${url}`,{
+        fetch(`https://www.dnd5eapi.co/api/${url}`,{
             method: 'GET',
         })
             .then((res) => {
