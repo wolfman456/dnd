@@ -1,5 +1,5 @@
-import useApiCall from "../api-call/UseApi.js";
-import { useParams } from "react-router-dom";
+import useApiCall from "../api-call/UseApi.jsx";
+import {Link, useParams} from "react-router-dom";
 
 function ReturnDisplay(){
     const {call} = useParams();
@@ -11,9 +11,8 @@ function ReturnDisplay(){
     return (
         <div className="btn-group-vertical" role="group" aria-label="Vertical button group">
             {data?.results?.map((item, index) => (
-                <button key={index} type="button" className="btn btn-primary">
-                    {item.name}
-                </button>
+                <Link to={'/classes/'+item.url} key={index} type="button" className="btn btn-primary">{item.name}</Link>
+
             ))}
         </div>
      )
