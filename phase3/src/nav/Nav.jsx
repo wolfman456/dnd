@@ -19,7 +19,7 @@ function NavBar() {
                 <Link to={`return-display/magic-items`} className="nav-link">magic-items</Link>
             </li>
             <li>
-                <Link to={`return-display/races`} className="nav-link">races</Link>
+                <Link to={`return-display/spells`} className="nav-link">Spells</Link>
             </li>
         </ul>
     )

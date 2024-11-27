@@ -6,7 +6,6 @@ function useApiCall(url) {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        console.log(url.toString())
         fetch(`https://www.dnd5eapi.co${url}`,{
             method: 'GET',
         })
@@ -19,13 +18,11 @@ function useApiCall(url) {
             .then((data) => {
                 setData(data);
                 setLoading(false);
-                console.log("succeeded");
             })
             .catch((error) => {
                 console.error(error);
                 setError(error);
                 setLoading(false);
-                console.log('oops url : ' + url);
             });
     }, [url]);
 

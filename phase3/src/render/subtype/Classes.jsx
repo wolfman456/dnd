@@ -14,7 +14,7 @@ function Classes(x) {
         }}>
             <h2>{data.name}</h2>
             <div>
-                <p>Hit Die : {"D"+data.hit_die}</p>
+                <p>Hit Die : {"D" + data.hit_die}</p>
             </div>
             <h2>Proficiency Choices</h2>
             {data.proficiency_choices.map((choice, index) => (
@@ -38,7 +38,25 @@ function Classes(x) {
                     ))}
                 </ul>
             </div>
+            <div>
+                <h2>Saving Throws</h2>
+                {data.saving_throws.map((items, index) => (
+                    <li key={index}>
+                        <p>{items.name}</p>
+                    </li>
+                ))}
+            </div>
+            <div>
+                <ul>
+                    <h2>Starting Equipment</h2>
+                    {data.starting_equipment.map((item, index) => (
 
+                        <li key={index}>
+                            {item.equipment.name} (x{item.quantity})
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     )
 }
