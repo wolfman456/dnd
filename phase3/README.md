@@ -2,7 +2,7 @@
 
 | Step                                                         | status  |
 |--------------------------------------------------------------|---------|
-| creat search function                                        |         |
+| creat search function                                        | done    |
 | ~~Generate random table~~                                    | removed |
 | bootstrap for CSS                                            | done    |
 | creat header with tabs                                       | done    |
