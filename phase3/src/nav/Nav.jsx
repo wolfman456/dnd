@@ -13,10 +13,10 @@ function NavBar() {
                 <Link to={`return-display/monsters`} className="nav-link">Monsters</Link>
             </li>
             <li>
-                <Link to={`return-display/equipment`} className="nav-link">equipment</Link>
+                <Link to={`return-display/equipment`} className="nav-link">Equipment</Link>
             </li>
             <li>
-                <Link to={`return-display/magic-items`} className="nav-link">magic-items</Link>
+                <Link to={`return-display/magic-items`} className="nav-link">Magic-Items</Link>
             </li>
             <li>
                 <Link to={`return-display/spells`} className="nav-link">Spells</Link>

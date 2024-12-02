@@ -38,7 +38,7 @@ function Monster(x) {
 
                 <h3>Proficiencies</h3>
                 <ul>
-                    {data.proficiencies.map((prof, index) => (
+                    {data?.proficiencies?.map((prof, index) => (
                         <li key={index}>
                             {prof.proficiency.name}: +{prof.value}
                         </li>

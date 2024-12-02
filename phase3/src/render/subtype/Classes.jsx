@@ -5,13 +5,7 @@ function Classes(x) {
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error.message || "An unknown error occurred"}</div>;
     return (
-        <div style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            backgroundColor: "white",
-            width: "500px",
-        }}>
+        <div>
             <h2>{data?.name}</h2>
             <div>
                 <p>Hit Die : {"D" + data?.hit_die}</p>
@@ -32,7 +26,7 @@ function Classes(x) {
             <div>
                 <h4>Proficiency Choices</h4>
                 <ul>
-                    {data?.proficiencies.map((proficiency, index) => (
+                    {data?.proficiencies?.map((proficiency, index) => (
 
                         <li key={index}>{proficiency.name}</li>
                     ))}

@@ -76,7 +76,14 @@ function ReturnDisplay() {
                             </Button>
                             <Collapse in={isOpen}>
                                 <div id={`collapse-text-${index}`}>
-                                    <RenderType type={call} url={item.url} />
+                                    <div style={{
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        justifyContent: "center",
+                                        backgroundColor: "white",
+                                        width: "500px",
+                                    }}><RenderType type={call} url={item.url} /></div>
+
                                 </div>
                             </Collapse>
                         </div>
